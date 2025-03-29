@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Recognition</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Top Section: GMM Explanation -->
+        <div class="section gmm-section">
+            <h1>Human Emotion Recognition using Gaussian Mixture Model (GMM)</h1>
+            <h2>Gaussian Mixture Model (GMM)</h2>
+            <p>GMM is a probabilistic model that represents data as a mixture of multiple Gaussian distributions. 
+            It is widely used in <strong>speech emotion recognition</strong> to model complex audio patterns.</p>
+        </div>
+
+        <!-- Middle Section: File Upload -->
+        <div class="section upload-section">
+            <h2>Upload an Audio File for Emotion Recognition</h2>
+            <form id="upload-form">
+                <input type="file" id="file-upload" name="file">
+                <label for="file-upload" class="upload-btn">Choose File</label>
+                <button type="submit">Predict Emotion</button>
+            </form>
+            <p id="prediction">Predicted Emotion: <span>...</span></p>
+        </div>
+
+        <!-- Bottom Section: Use Case -->
+        <div class="section use-case">
+            <h2>Use Case: AI-Powered Virtual Assistants & Mental Health Monitoring</h2>
+            <p><strong>Industry:</strong> Healthcare, Human-Computer Interaction, Voice AI</p>
+            <p>AI models help recognize emotions in speech to assist in mental health diagnostics and improve 
+                user interaction in virtual assistants.</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p><strong>Project by:</strong> Md Mushir Alam, Yukat Bhardwaj, Mainak Sen</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById("upload-form").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            let formData = new FormData();
+            let fileInput = document.getElementById("file-upload");
+
+            if (!fileInput.files.length) {
+                alert("Please select an audio file first!");
+                return;
+            }
+
+            formData.append("file", fileInput.files[0]);
+
+            let response = await fetch("/predict", { method: "POST", body: formData });
+            let result = await response.json();
+            
+            document.getElementById("prediction").innerHTML = `Predicted Emotion: <span>${result.prediction}</span>`;
+        });
+    </script>
+
+</body>
+</html>
