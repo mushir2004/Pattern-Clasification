@@ -10,7 +10,10 @@ This project aims to classify human emotions—**Happy, Sad, Angry, Neutral**—
 
 ## 🚀 Why Gaussian Mixture Model (GMM)?
 
-✅ **Captures Variability**: Voice signals are continuous and can be effectively modeled as a mixture of Gaussian distributions. ✅ **Handles Multi-Modal Distributions**: Unlike traditional classifiers, GMM can model variations within the same emotion class. ✅ **Personalized AI Assistants**: Helps in building adaptive AI that can understand user emotions in real-time. ✅ **Healthcare Applications**: Supports mental health tracking by analyzing emotional patterns in speech.
+✅ **Captures Variability**: Voice signals are continuous and can be effectively modeled as a mixture of Gaussian distributions.
+✅ **Handles Multi-Modal Distributions**: Unlike traditional classifiers, GMM can model variations within the same emotion class.
+✅ **Personalized AI Assistants**: Helps in building adaptive AI that can understand user emotions in real-time. 
+✅ **Healthcare Applications**: Supports mental health tracking by analyzing emotional patterns in speech.
 
 ## 📂 Dataset: RAVDESS Emotional Speech Audio Dataset
 
@@ -18,7 +21,10 @@ We utilize the **RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and 
 
 ## 🔧 How It Works?
 
-1️⃣ **Feature Extraction**: Extract **Mel-Frequency Cepstral Coefficients (MFCCs)** from speech signals. 2️⃣ **Modeling Emotions**: Use **Gaussian Mixture Model (GMM)** to cluster voice patterns into emotion categories. 3️⃣ **Gaussian Components**: Fit Gaussian distributions to capture variations in **tone, pitch, and frequency**. 4️⃣ **Classification**: Predict emotions using **maximum likelihood estimation**.
+1️⃣ **Feature Extraction**: Extract **Mel-Frequency Cepstral Coefficients (MFCCs)** from speech signals. 
+2️⃣ **Modeling Emotions**: Use **Gaussian Mixture Model (GMM)** to cluster voice patterns into emotion categories. 
+3️⃣ **Gaussian Components**: Fit Gaussian distributions to capture variations in **tone, pitch, and frequency**. 
+4️⃣ **Classification**: Predict emotions using **maximum likelihood estimation**.
 
 ## 🛠️ Tech Stack
 
