@@ -8,6 +8,10 @@ This project aims to classify human emotions—**Happy, Sad, Angry, Neutral**—
 - **Mental Health Monitoring** 🏥
 - **Human-Computer Interaction & Voice AI** 🤖
 
+
+[![Demo Video](https://img.youtube.com/vi/c07gtChwn6o/0.jpg)](https://www.youtube.com/watch?v=c07gtChwn6o)
+
+
 ## 🚀 Why Gaussian Mixture Model (GMM)?
 
 - **Captures Variability**: Voice signals are continuous and can be effectively modeled as a mixture of Gaussian distributions.
